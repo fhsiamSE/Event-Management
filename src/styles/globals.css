@@ -1,0 +1,227 @@
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: #f6f8fa;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background: linear-gradient(to right, #1e40af, #60a5fa);
+  color: white;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 16px;
+}
+.header-title {
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 0.05em;
+}
+.header-links {
+  display: flex;
+  gap: 16px;
+  font-size: 1rem;
+}
+.header-links a {
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.2s;
+}
+.header-links a:hover {
+  color: #fde047;
+  text-decoration: underline;
+}
+
+/* Event Card */
+.event-card {
+  background: linear-gradient(135deg, #eff6ff 0%, #fff 100%);
+  box-shadow: 0 4px 16px rgba(30,64,175,0.08);
+  border-radius: 1rem;
+  padding: 24px;
+  margin-bottom: 16px;
+  border: 1px solid #dbeafe;
+  transition: box-shadow 0.2s;
+}
+.event-card:hover {
+  box-shadow: 0 8px 32px rgba(30,64,175,0.16);
+}
+.event-card-title {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #1d4ed8;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.event-card-initial {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  background: #2563eb;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 24px;
+  font-size: 0.875rem;
+  font-weight: bold;
+}
+.event-card-meta {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+.event-card-meta span {
+  border-radius: 6px;
+  padding: 2px 8px;
+  font-size: 0.875rem;
+}
+.event-card-date {
+  background: #dbeafe;
+  color: #1d4ed8;
+}
+.event-card-location {
+  background: #bbf7d0;
+  color: #15803d;
+}
+.event-card-category {
+  background: #fef9c3;
+  color: #b45309;
+}
+.event-card-desc {
+  color: #374151;
+  margin-top: 8px;
+}
+
+/* Event List & Form */
+.event-list {
+  max-width: 672px;
+  margin: 32px auto 0 auto;
+}
+.event-list-search {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+@media (min-width: 640px) {
+  .event-list-search {
+    flex-direction: row;
+  }
+}
+.event-list-input, .event-list-select {
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  outline: none;
+  flex: 1;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.event-list-input:focus, .event-list-select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px #60a5fa33;
+}
+.event-list-empty {
+  text-align: center;
+  color: #6b7280;
+}
+.event-list-view-btn {
+  margin-top: 8px;
+  display: inline-block;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+.event-list-view-btn:hover {
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+}
+
+/* Event Form */
+.event-form {
+  background: #fff;
+  box-shadow: 0 8px 32px rgba(30,64,175,0.08);
+  border-radius: 1.25rem;
+  padding: 32px;
+  max-width: 480px;
+  margin: 32px auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border: 1px solid #dbeafe;
+}
+.event-form-input, .event-form-select, .event-form-textarea {
+  width: 100%;
+  border: 1px solid #bfdbfe;
+  border-radius: 8px;
+  padding: 8px 12px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.event-form-input:focus, .event-form-select:focus, .event-form-textarea:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 0 2px #60a5fa33;
+}
+.event-form-btn {
+  width: 100%;
+  background: linear-gradient(to right, #2563eb, #60a5fa);
+  color: #fff;
+  padding: 10px 0;
+  border-radius: 8px;
+  font-weight: 600;
+  box-shadow: 0 2px 8px rgba(30,64,175,0.08);
+  border: none;
+  transition: background 0.2s;
+  cursor: pointer;
+}
+.event-form-btn:hover {
+  background: linear-gradient(to right, #1e40af, #3b82f6);
+}
+
+/* My Events */
+.my-events-main {
+  max-width: 672px;
+  margin: 32px auto 0 auto;
+}
+.my-events-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+.my-events-empty {
+  color: #6b7280;
+}
+.my-events-card {
+  position: relative;
+}
+.my-events-delete-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ef4444;
+  color: #fff;
+  padding: 4px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.my-events-delete-btn:hover {
+  background: #b91c1c;
+}
